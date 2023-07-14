@@ -6,24 +6,21 @@
     <title>Learn DOM</title>
 </head>
 <body>
+
     <div id="app"></div>
-    <script type="text/javascript">
+    <div id="paragraph"></div>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+    <!-- Babel Script -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/jsx">
         // Select the div element with 'app' id
       const app = document.getElementById('app');
+      const paragraph = document.getElementById('paragraph');
 
-        // Create a new H1 element
-        const header = document.createElement('h1');
-
-        // Create a new text node for the H1 element
-        const headerContent = document.createTextNode(
-        'Mukti Dwi Jatmoko 🚀',
-        );
-
-        // Append the text to the H1 element
-        header.appendChild(headerContent);
-
-        // Place the H1 element inside the div
-        app.appendChild(header);
+      ReactDOM.render(<h1>Develop. Preview. Ship. 🚀</h1>, app);
+      ReactDOM.render(<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis minus iure aspernatur modi quos magnam id asperiores temporibus odit ab illo, corrupti, aliquam inventore cumque exercitationem eum fugiat ipsam aliquid.</p>, paragraph);
     </script>
 </body>
 </html>
