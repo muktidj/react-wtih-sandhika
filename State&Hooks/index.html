@@ -28,8 +28,14 @@
       function HomePage() {
         const names = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton'];
 
+        const [count, setCount] = React.useState(0);
+
         function handleClick() {
-            console.log("Increment Click Me")
+            console.log("Increment Click Me");
+        }
+
+        function handleCountClick() {
+            setCount(count + 1);
         }
 
         return (
@@ -44,6 +50,7 @@
             </ul>
 
             <button onClick={handleClick}>Click ME</button>
+            <button onClick={handleCountClick}> Count Click {count} </button>
           </div>
         );
       }
